@@ -34,8 +34,4 @@ def user_choice_hh():
         jsonfile_hh.add_vacancies(vacancies_from_hh)
         jsonfile_hh.sort_vacancies_by_salary()
         jsonfile_hh.file_writer()
-
-        # Возвращаем созданный экземпляр класса JSONCSaver для возможного дальнейшего использования
         return jsonfile_hh
-
-

@@ -41,7 +41,11 @@ class Vacancy:
     def __lt__(self, other):
         if not isinstance(other, Vacancy):
             raise TypeError('Вакансию можно сравнивать только с вакансией')
-        return self.salary_from < other.salary_from
+        # Добавляем проверку на None
+        if self.salary_from is not None and other.salary_from is not None:
+            return self.salary_from < other.salary_from
+        else:
+            return False
 
 
 class Vacancies:
